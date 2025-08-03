@@ -9,8 +9,7 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-    // site: 'https://twizmo-games.',
-    site: 'https://twizmo-games.github.io/website/',
+    site: 'https://twizmo-games.github.io/',
     base: 'website',
     vite: {
         plugins: [tailwindcss()]
