@@ -1,11 +1,11 @@
 ---
 import {Image} from "astro:assets"
-import logo from "../assets/images/twizmo-games.svg";
+import logo from "../assets/website/images/twizmo-games.svg";
 
 const links = [
-    {url: "/our-games", name: "Our Games"},
-    {url: "/blog", name: "Our Twizted Blog"},
-    {url: "/contact", name: "Contact Us"},
+    {url: "/website/our-games", name: "Our Games"},
+    {url: "/website/blog", name: "Our Twizted Blog"},
+    {url: "/website/contact", name: "Contact Us"},
 ]
 ---
 
@@ -13,7 +13,7 @@ const links = [
      class="flex items-center justify-between max-w-5xl mx-auto"
      aria-label="navigation menu">
     <!-- Brand Logo -->
-    <a href="/" class="font-bold">
+    <a href="/website" class="font-bold">
         <Image alt="Logo" src={logo} height="48"/>
     </a>
 
