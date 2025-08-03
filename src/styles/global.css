@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --color-base: #1e1e2e;
+    --color-maroon: #eba0ac;
+    --color-mauve: #cba6f7;
+    --color-pink: #f5c2e7;
+    --color-green: #a6e3a1;
+    --color-text: #1e1e2e;
+
+    --font-sans: Inter;
+
+    --spacing-1080: 1080px;
+}
+
+@layer base {
+
+    h1, h2, h3, h4, h5, h6, p {
+        @apply my-4;
+    }
+
+    h1 {
+        @apply text-2xl font-black;
+    }
+
+    h2 {
+        @apply text-xl;
+    }
+
+    h3 {
+        @apply text-lg;
+    }
+
+
+}
