@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-    font-family: "Inter";
-    src: url("/fonts/Inter.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 @theme {
     --color-primary: #40a02b;
 
@@ -20,7 +12,7 @@
 
     --color-text: #4c4f69;
 
-    --font-sans: Inter;
+    --font-sans: "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
     --spacing-1080: 1080px;
 }
