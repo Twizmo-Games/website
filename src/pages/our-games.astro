@@ -1,0 +1,25 @@
+---
+import {Picture} from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+
+import threePack from "../assets/images/3packs.png";
+---
+
+<Layout>
+    <h1>Our Games</h1>
+
+    <div class="flex max-md:flex-wrap gap-4 md:gap-8 justify-center">
+        <p class="flex-2/3 self-center">
+            Twizmo! Games offers three unique games, each developed with a similar “kit of parts”—a deck of cards and a
+            familiar twist cube. The Original Twizmo! is a group-play, three-dimensional twist on Tic Tac Toe. For
+            wordsmiths and language lovers Twizmo! Words is a fast-moving word-finding game, for almost all ages. For
+            card
+            lovers (and people who love them) Twizmo! Cards doubles the fun of poker-style games with two “decks” of
+            cards—one on the cube itself!
+        </p>
+
+        <Picture class="flex-1" src={threePack} alt="A 3 pack of Twizmo! Games"/>
+
+    </div>
+
+</Layout>

@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@theme {
+    --color-primary: #40a02b;
+
+    --color-background: #eff1f5;
+    --color-mantle: #e6e9ef;
+    --color-crust: #dce0e8;
+    --color-surface0: #ccd0da;
+    --color-surface1: #bcc0cc;
+    --color-surface2: #acb0be;
+
+    --color-text: #4c4f69;
+
+    --font-sans: "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+    --spacing-1080: 1080px;
+}
+
+@layer base {
+
+    h1, h2, h3, h4, h5, h6, p {
+        @apply my-4 md:my-8;
+    }
+
+    h1 {
+        @apply text-2xl font-black md:text-4xl;
+    }
+
+    h2 {
+        @apply text-xl md:text-2xl;
+    }
+
+    h3 {
+        @apply text-lg md:text-xl;
+    }
+
+    picture {
+        @apply my-8 md:my-12;
+    }
+
+
+}
