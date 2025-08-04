@@ -14,7 +14,7 @@ const links = [
      aria-label="navigation menu">
     <!-- Brand Logo -->
     <a href="/website" class="font-bold">
-        <Image alt="Logo" src={logo} height="32"/>
+        <Image alt="Logo" src={logo} height="32" class="hover:scale-110 transition-all"/>
     </a>
 
     <!-- Desktop Menu -->
@@ -54,7 +54,7 @@ const links = [
         x-transition:enter-start="-translate-y-full" x-transition:enter-end="translate-y-0"
         x-transition:leave="transition motion-reduce:transition-none ease-out duration-300"
         x-transition:leave-start="translate-y-0" x-transition:leave-end="-translate-y-full" id="mobileMenu"
-        class="fixed max-h-svh overflow-y-auto inset-x-0 top-0 z-10 flex flex-col divide-y divide-outline divide-surface2 border-b border-surface2 border-outline px-6 pb-6 pt-20 md:hidden bg-background shadow-2xl">
+        class="fixed max-h-svh overflow-y-auto inset-x-0 top-0 z-10 flex flex-col divide-y divide-outline divide-secondary border-b border-secondary border-outline px-6 pb-6 pt-20 md:hidden bg-background shadow-2xl">
 
         {links.map((link) => (
                 <li class="py-4">

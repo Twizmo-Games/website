@@ -1,18 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #40a02b;
-
-    --color-background: #eff1f5;
-    --color-mantle: #e6e9ef;
-    --color-crust: #dce0e8;
-    --color-surface0: #ccd0da;
-    --color-surface1: #bcc0cc;
-    --color-surface2: #acb0be;
-
-    --color-text: #4c4f69;
-
-    --spacing-1080: 1080px;
+    --color-background: var(--color-stone-50);
+    --color-primary: var(--color-blue-400);
+    --color-secondary: var(--color-stone-400);
+    --color-text: var(--color-stone-700);
 }
 
 @layer base {
