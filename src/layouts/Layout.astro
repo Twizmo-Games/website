@@ -1,40 +1,38 @@
 ---
-import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
-import {ClientRouter} from "astro:transitions";
+import "@/styles/global.css";
+import Navigation from "@/components/Navigation.astro";
+import Footer from "@/components/Footer.astro";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
-    title: string,
+    title: string;
 }
 
-const {title} = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="w-full h-full">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="icon" type="image/svg+xml" href="/website/favicon.svg"/>
-    <meta name="generator" content={Astro.generator}/>
-    <title>{title}</title>
-    <ClientRouter/>
-</head>
-<body class="text-text bg-background flex flex-col min-h-screen">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/website/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <ClientRouter />
+    </head>
+    <body>
+        <header>
+            <Navigation />
+        </header>
 
-<header class="border-b border-secondary p-4 shadow-md md:p-8 md:shadow-lg">
-    <Navigation/>
-</header>
+        <main transition:animate="slide">
+            <slot />
+        </main>
 
-<main class="w-full max-w-5xl mx-auto px-4 py-8 md:px-2 md:py-16 flex-1" transition:animate="slide">
-    <slot/>
-</main>
-
-<!--footer is not within the footer component for styling reasons-->
-<footer class="border-t border-secondary p-4 md:p-8 ">
-    <Footer class="max-w-5xl mx-auto"></Footer>
-</footer>
-
-</body>
+        <!--footer is not within the footer component for styling reasons-->
+        <footer>
+            <Footer class="mx-auto md:container" />
+        </footer>
+    </body>
 </html>

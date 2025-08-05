@@ -9,7 +9,33 @@
 
 @layer base {
 
-    h1, h2, h3, h4, h5, h6, p {
+    html {
+        @apply w-full h-full;
+    }
+
+    body {
+        @apply text-text bg-background flex flex-col min-h-screen;
+    }
+
+    header {
+        @apply border-b border-secondary p-4 shadow-md md:p-8 md:shadow-lg;
+    }
+
+    main {
+        @apply w-full px-4 py-8 flex-1 md:px-2 md:py-16 mx-auto md:container;
+    }
+
+    footer {
+        @apply border-t border-secondary p-4 md:p-8;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
         @apply my-4 md:my-8;
     }
 
@@ -28,6 +54,8 @@
     picture {
         @apply my-8 md:my-12;
     }
+}
 
-
+.section {
+    @apply mx-auto md:container;
 }
