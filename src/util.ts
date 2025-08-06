@@ -6,7 +6,6 @@ import { base } from "astro:config/server"
  * @returns a fully formed relative URL string
  */
 export const relPath = (...parts: Array<string>): string => {
-
     // strips trailing slashes: /base/// -> /base
     const cleanedBase = base.replace(/\/+$/, '');
 
