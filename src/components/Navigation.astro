@@ -3,44 +3,42 @@ import { Image } from "astro:assets";
 import logo from "@/assets/images/logo.svg";
 
 import { SiteLinks } from "@/links";
+import { relPath } from "@/util";
 ---
 
 <nav
     x-data="{ mobileMenuIsOpen: false }"
     x-on:click.away="mobileMenuIsOpen = false"
-    class="flex items-center justify-between section"
+    class="flex justify-between items-center"
     aria-label="navigation menu"
 >
     <!-- Brand Logo -->
-    <a href="/website" class="font-bold">
+    <a href="/website">
         <Image
             alt="Logo"
             src={logo}
-            height="32"
+            height="38"
             class="hover:scale-110 transition-all"
         />
     </a>
 
     <!-- Desktop Menu -->
-    <ul class="hidden items-center gap-4 md:flex">
-        {
-            SiteLinks.map((link) => (
-                <li>
-                    <a
-                        href={link.url}
-                        class:list={[
-                            "underline-offset-8 font-medium decoration-2 hover:text-primary focus:outline-hidden focus:underline",
-                            Astro.url.pathname === link.url
-                                ? "underline text-primary"
-                                : "",
-                        ]}
-                        aria-current="page"
-                    >
-                        {link.name}
-                    </a>
-                </li>
-            ))
-        }
+    <ul class="hidden items-stretch gap-8 md:flex font-semibold text-center">
+        <li
+            class="transition-all hover:underline underline-offset-8 decoration-2"
+        >
+            <a href={relPath("our-games")}>Our Games</a>
+        </li>
+        <li
+            class="transition-all hover:underline underline-offset-8 decoration-2"
+        >
+            <a href={relPath("about")}>About Twizmo!</a>
+        </li>
+        <li
+            class="transition-all hover:underline underline-offset-8 decoration-2"
+        >
+            <a href={relPath("contact")} class="">Contact Us</a>
+        </li>
     </ul>
 
     <!-- Mobile Menu Button -->
@@ -96,19 +94,32 @@ import { SiteLinks } from "@/links";
         x-transition:leave-start="translate-y-0"
         x-transition:leave-end="-translate-y-full"
         id="mobileMenu"
-        class="fixed max-h-svh overflow-y-auto inset-x-0 top-0 z-10 flex flex-col divide-y divide-outline divide-secondary border-b border-secondary border-outline px-6 pb-6 pt-20 md:hidden bg-background shadow-2xl"
+        class="fixed max-h-svh overflow-y-auto inset-x-0 top-0 z-10 flex flex-col divide-y-2 divide-outline divide-text border-b-2 border-text border-outline px-6 pb-6 pt-20 md:hidden bg-green shadow-2xl"
     >
-        {
-            SiteLinks.map((link) => (
-                <li class="py-4">
-                    <a
-                        href={link.url}
-                        class="w-full text-lg font-medium text-on-surface focus:underline"
-                    >
-                        {link.name}
-                    </a>
-                </li>
-            ))
-        }
+        <li class="py-4">
+            <a
+                href={relPath("our-games")}
+                class="w-full text-lg font-medium text-on-surface focus:underline"
+            >
+                Our Games
+            </a>
+        </li>
+
+        <li class="py-4">
+            <a
+                href={relPath("about")}
+                class="w-full text-lg font-medium text-on-surface focus:underline"
+            >
+                About Twizmo!
+            </a>
+        </li>
+        <li class="py-4">
+            <a
+                href={relPath("contact")}
+                class="w-full text-lg font-medium text-on-surface focus:underline"
+            >
+                Contact Us
+            </a>
+        </li>
     </ul>
 </nav>

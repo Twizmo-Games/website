@@ -4,7 +4,14 @@
     --color-background: var(--color-stone-50);
     --color-primary: var(--color-blue-400);
     --color-secondary: var(--color-stone-400);
-    --color-text: var(--color-stone-700);
+    --color-text: var(--color-stone-800);
+
+    --color-blue: #60bed4;
+    --color-green: #6bae3c;
+    --color-yellow: #f1ce15;
+    --color-orange: #e77226;
+    --color-purple: #6a4b9e;
+    --color-red: #d3422f;
 }
 
 @layer base {
@@ -18,15 +25,23 @@
     }
 
     header {
-        @apply border-b border-secondary p-4 shadow-md md:p-8 md:shadow-lg;
+        @apply border-b-text border-b-2 bg-blue;
+    }
+
+    nav {
+        @apply p-4 mx-auto container;
     }
 
     main {
-        @apply w-full px-4 py-8 flex-1 md:px-2 md:py-16 mx-auto md:container;
+        @apply px-4 py-8 flex-1 md:py-16 mx-auto container;
     }
 
     footer {
-        @apply border-t border-secondary p-4 md:p-8;
+        @apply border-t-text border-t-2;
+    }
+
+    footer>* {
+        @apply p-4 mx-auto container;
     }
 
     h1,
@@ -56,6 +71,6 @@
     }
 }
 
-.section {
-    @apply mx-auto md:container;
+.panel {
+    @apply border-text border-2 border-r-6 border-b-6 rounded-2xl p-4;
 }
