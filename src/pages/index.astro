@@ -1,25 +1,25 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import DiskuDisk from "@/components/DiskuDisk.astro";
-
-import clover from "@/assets/sprites/clover.svg";
+import DiskuGrid from "@/components/DiskuGrid.astro";
 ---
 
 <Layout title="Twizmo! Games">
-    <div class="text-center max-w-2xl mx-auto">
-        <h1 class="italic text-5xl md:text-8xl">DISKU!</h1>
-        <p class="text-xl font-semibold">
-            A minimalist brain teaser to scratch your puzzle itch!
-        </p>
+  <div class="text-center max-w-2xl mx-auto">
+    <h1 class="text-5xl md:text-8xl">DISKU!</h1>
+    <p class="text-xl font-semibold">
+      A minimalist brain teaser to scratch your puzzle itch!
+    </p>
 
-        <p class="font-bold">
-            [tumbling animation from game with disks and icons goes here]
-        </p>
+    <DiskuGrid />
 
-        <p class="">
-            DISKU is a game of logic and deduction. Each DISKU board is a square
-            grid of disks, where each disk has a color and a shape on top. Each
-            row, column, and color contains one, and only one of each shape.
-        </p>
-    </div>
+    <p class="font-bold">
+      [tumbling animation from game with disks and icons goes here]
+    </p>
+
+    <p class="">
+      DISKU is a game of logic and deduction. Each DISKU board is a square grid
+      of disks, where each disk has a color and a shape on top. Each row,
+      column, and color contains one, and only one of each shape.
+    </p>
+  </div>
 </Layout>
