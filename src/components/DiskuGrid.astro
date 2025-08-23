@@ -1,9 +1,68 @@
 ---
 import DiskuDisk from "./DiskuDisk.astro";
 
-import clover from "@/assets/sprites/clover.svg";
+import circle from "@/assets/sprites/circle.svg";
+import cross from "@/assets/sprites/x.svg";
+import star from "@/assets/sprites/star.svg";
+import triangle from "@/assets/sprites/triangle.svg";
+import burst from "@/assets/sprites/starburst.svg";
+
+import diskPurple from "@/assets/sprites/disk-purple.svg";
+import diskRed from "@/assets/sprites/disk-red.svg";
+import diskYellow from "@/assets/sprites/disk-yellow.svg";
+import diskGreen from "@/assets/sprites/disk-green.svg";
+import diskBlue from "@/assets/sprites/disk-blue.svg";
 ---
 
-<div>
-  <DiskuDisk color="red" width={48} height={48} icon={clover} />
+<div
+  id="disku-grid"
+  class="grid grid-cols-5 gap-0.5 aspect-square w-full my-4 p-8"
+>
+  <DiskuDisk symbol={circle} disk={diskPurple} />
+  <DiskuDisk symbol={burst} disk={diskYellow} />
+  <DiskuDisk symbol={star} disk={diskBlue} />
+  <DiskuDisk symbol={cross} disk={diskBlue} />
+  <DiskuDisk symbol={triangle} disk={diskYellow} />
+
+  <DiskuDisk symbol={star} disk={diskGreen} />
+  <DiskuDisk symbol={circle} disk={diskYellow} />
+  <DiskuDisk symbol={triangle} disk={diskPurple} />
+  <DiskuDisk symbol={burst} disk={diskGreen} />
+  <DiskuDisk symbol={cross} disk={diskPurple} />
+
+  <DiskuDisk symbol={triangle} disk={diskGreen} />
+  <DiskuDisk symbol={cross} disk={diskGreen} />
+  <DiskuDisk symbol={circle} disk={diskRed} />
+  <DiskuDisk symbol={star} disk={diskRed} />
+  <DiskuDisk symbol={burst} disk={diskPurple} />
+
+  <DiskuDisk symbol={cross} disk={diskRed} />
+  <DiskuDisk symbol={star} disk={diskYellow} />
+  <DiskuDisk symbol={burst} disk={diskBlue} />
+  <DiskuDisk symbol={triangle} disk={diskBlue} />
+  <DiskuDisk symbol={circle} disk={diskBlue} />
+
+  <DiskuDisk symbol={burst} disk={diskRed} />
+  <DiskuDisk symbol={triangle} disk={diskRed} />
+  <DiskuDisk symbol={cross} disk={diskYellow} />
+  <DiskuDisk symbol={circle} disk={diskGreen} />
+  <DiskuDisk symbol={star} disk={diskPurple} />
 </div>
+
+<script>
+  import gsap from "gsap";
+
+  const disks = gsap.utils.shuffle(gsap.utils.toArray("#disku-grid > *"));
+
+  const distance = Math.hypot(window.innerWidth, window.innerHeight);
+  const angles = disks.map(() => gsap.utils.random(0, Math.PI * 2, 0.001));
+
+  gsap.from(disks, {
+    x: (i) => Math.cos(angles[i]) * distance,
+    y: (i) => Math.sin(angles[i]) * distance,
+    opacity: 0,
+    ease: "power3.out",
+    stagger: 0.02,
+    duration: 1,
+  });
+</script>

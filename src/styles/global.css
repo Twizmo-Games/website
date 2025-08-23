@@ -37,7 +37,7 @@
     }
 
     footer {
-        @apply border-t-text border-t-2;
+        @apply border-t-text border-t-2 bg-green;
     }
 
     footer>* {
