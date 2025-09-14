@@ -1,31 +1,19 @@
 ---
 import { Image } from "astro:assets";
 
-import disk from "@/assets/sprites/disk.svg";
-
 interface Props {
-    color: string;
-    icon: ImageMetadata;
-    width: number;
-    height: number;
+  symbol: any;
+  disk: any;
 }
 
-const { color, icon, width, height } = Astro.props;
+const { symbol, disk } = Astro.props;
 ---
 
-<div>
-    <Image
-        class="relative top-0"
-        width={width}
-        height={height}
-        src={disk}
-        alt="DISKU Disk"
-    />
-    <Image
-        class="relative top-0 left-0"
-        width={width}
-        height={height}
-        src={icon}
-        alt="Icon"
-    />
+<div class="relative leading-none select-none w-full h-full aspect-square">
+  <Image src={disk} alt="disk" class="absolute block w-full h-full" />
+  <Image
+    src={symbol}
+    alt="symbol"
+    class="absolute block pointer-events-none w-full h-full"
+  />
 </div>

@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="149.68817"
-   height="149.85394"
-   viewBox="0 0 39.604995 39.648855"
+   width="255.99998"
+   height="255.99998"
+   viewBox="0 0 67.733328 67.733328"
    version="1.1"
    id="svg1"
    xml:space="preserve"
@@ -14,7 +14,7 @@
        style="color-interpolation-filters:sRGB"
        id="filter7406"
        x="-0.16740142"
-       y="-0.23113194"
+       y="-0.23113195"
        width="1.3348028"
        height="1.4622639"><feGaussianBlur
          stdDeviation="3.5119397"
@@ -28,7 +28,7 @@
          stdDeviation="3.3615884"
          id="feGaussianBlur7490" /></filter></defs><g
      id="layer1"
-     transform="translate(-81.797508,-81.775573)"><g
+     transform="translate(-67.73333,-67.73333)"><g
        id="g142"
        transform="translate(4.4458777e-7,67.597026)"><g
          id="g102"
@@ -306,7 +306,7 @@
            transform="scale(1.000557,0.99944332)"><tspan
              id="tspan224"
              style="font-size:59.3132px;fill:#bfbfbf;fill-opacity:1;stroke:#000000;stroke-width:0.889699;stroke-dasharray:none;stroke-opacity:1"
-             x="71.580284"
+             x="71.580299"
              y="71.62915">4x4</tspan></text><ellipse
            style="display:none;fill:#000000;fill-opacity:0.75;stroke:none;stroke-width:8.897;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
            id="ellipse244"
@@ -382,7 +382,7 @@
            transform="scale(-1.000557,-0.99944332)"><tspan
              id="tspan223"
              style="font-size:59.3132px;fill:#bfbfbf;fill-opacity:1;stroke:#000000;stroke-width:0.889699;stroke-dasharray:none;stroke-opacity:1"
-             x="36.428989"
+             x="36.428997"
              y="-28.330519">5x5</tspan></text><ellipse
            style="display:none;fill:#000000;fill-opacity:0.75;stroke:none;stroke-width:8.897;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
            id="ellipse242"
@@ -469,7 +469,7 @@
            transform="scale(1.000557,0.99944332)"><tspan
              id="tspan222"
              style="font-size:59.3132px;fill:#bfbfbf;fill-opacity:1;stroke:#000000;stroke-width:0.889699;stroke-dasharray:none;stroke-opacity:1"
-             x="72.882675"
+             x="72.88269"
              y="78.816628">6x6</tspan></text><ellipse
            style="display:none;fill:#000000;fill-opacity:0.75;stroke:none;stroke-width:8.897;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
            id="ellipse243"
@@ -531,7 +531,7 @@
            transform="scale(1.000557,0.99944332)"><tspan
              id="tspan228"
              style="font-size:59.3132px;fill:#ffffff;fill-opacity:1;stroke:#404040;stroke-width:0.889699;stroke-dasharray:none;stroke-opacity:1"
-             x="71.580284"
+             x="71.580299"
              y="71.62915">4x4</tspan></text></g><g
          id="g234"
          transform="matrix(-0.59443955,0,0,-0.59382352,111.66542,131.32623)"
@@ -601,7 +601,7 @@
            transform="scale(-1.000557,-0.99944332)"><tspan
              id="tspan234"
              style="font-size:59.3132px;fill:#ffffff;fill-opacity:1;stroke:#404040;stroke-width:0.889699;stroke-dasharray:none;stroke-opacity:1"
-             x="36.428989"
+             x="36.428997"
              y="-28.330519">5x5</tspan></text></g><g
          id="g241"
          transform="matrix(0.59443955,0,0,0.59512333,157.71717,67.734857)"
@@ -681,7 +681,7 @@
            transform="scale(1.000557,0.99944332)"><tspan
              id="tspan241"
              style="font-size:59.3132px;fill:#ffffff;fill-opacity:1;stroke:#404040;stroke-width:0.889699;stroke-dasharray:none;stroke-opacity:1"
-             x="72.882675"
+             x="72.88269"
              y="78.816628">6x6</tspan></text></g></g><g
        id="layer5"
        style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.06213;stroke-dasharray:none;stroke-opacity:1"
