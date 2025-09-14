@@ -15,54 +15,72 @@ import diskBlue from "@/assets/sprites/disk-blue.svg";
 ---
 
 <div
-  id="disku-grid"
-  class="grid grid-cols-5 gap-0.5 aspect-square w-full my-4 p-8"
+        id="disku-grid"
+        class="grid grid-cols-5 gap-0.5 aspect-square w-full my-4 p-8 opacity-0"
 >
-  <DiskuDisk symbol={circle} disk={diskPurple} />
-  <DiskuDisk symbol={burst} disk={diskYellow} />
-  <DiskuDisk symbol={star} disk={diskBlue} />
-  <DiskuDisk symbol={cross} disk={diskBlue} />
-  <DiskuDisk symbol={triangle} disk={diskYellow} />
+    <DiskuDisk symbol={circle} disk={diskPurple}/>
+    <DiskuDisk symbol={burst} disk={diskYellow}/>
+    <DiskuDisk symbol={star} disk={diskBlue}/>
+    <DiskuDisk symbol={cross} disk={diskBlue}/>
+    <DiskuDisk symbol={triangle} disk={diskYellow}/>
 
-  <DiskuDisk symbol={star} disk={diskGreen} />
-  <DiskuDisk symbol={circle} disk={diskYellow} />
-  <DiskuDisk symbol={triangle} disk={diskPurple} />
-  <DiskuDisk symbol={burst} disk={diskGreen} />
-  <DiskuDisk symbol={cross} disk={diskPurple} />
+    <DiskuDisk symbol={star} disk={diskGreen}/>
+    <DiskuDisk symbol={circle} disk={diskYellow}/>
+    <DiskuDisk symbol={triangle} disk={diskPurple}/>
+    <DiskuDisk symbol={burst} disk={diskGreen}/>
+    <DiskuDisk symbol={cross} disk={diskPurple}/>
 
-  <DiskuDisk symbol={triangle} disk={diskGreen} />
-  <DiskuDisk symbol={cross} disk={diskGreen} />
-  <DiskuDisk symbol={circle} disk={diskRed} />
-  <DiskuDisk symbol={star} disk={diskRed} />
-  <DiskuDisk symbol={burst} disk={diskPurple} />
+    <DiskuDisk symbol={triangle} disk={diskGreen}/>
+    <DiskuDisk symbol={cross} disk={diskGreen}/>
+    <DiskuDisk symbol={circle} disk={diskRed}/>
+    <DiskuDisk symbol={star} disk={diskRed}/>
+    <DiskuDisk symbol={burst} disk={diskPurple}/>
 
-  <DiskuDisk symbol={cross} disk={diskRed} />
-  <DiskuDisk symbol={star} disk={diskYellow} />
-  <DiskuDisk symbol={burst} disk={diskBlue} />
-  <DiskuDisk symbol={triangle} disk={diskBlue} />
-  <DiskuDisk symbol={circle} disk={diskBlue} />
+    <DiskuDisk symbol={cross} disk={diskRed}/>
+    <DiskuDisk symbol={star} disk={diskYellow}/>
+    <DiskuDisk symbol={burst} disk={diskBlue}/>
+    <DiskuDisk symbol={triangle} disk={diskBlue}/>
+    <DiskuDisk symbol={circle} disk={diskBlue}/>
 
-  <DiskuDisk symbol={burst} disk={diskRed} />
-  <DiskuDisk symbol={triangle} disk={diskRed} />
-  <DiskuDisk symbol={cross} disk={diskYellow} />
-  <DiskuDisk symbol={circle} disk={diskGreen} />
-  <DiskuDisk symbol={star} disk={diskPurple} />
+    <DiskuDisk symbol={burst} disk={diskRed}/>
+    <DiskuDisk symbol={triangle} disk={diskRed}/>
+    <DiskuDisk symbol={cross} disk={diskYellow}/>
+    <DiskuDisk symbol={circle} disk={diskGreen}/>
+    <DiskuDisk symbol={star} disk={diskPurple}/>
 </div>
 
 <script>
-  import gsap from "gsap";
+    import gsap from "gsap";
 
-  const disks = gsap.utils.shuffle(gsap.utils.toArray("#disku-grid > *"));
+    const grid = document.getElementById("disku-grid");
+    const disks = gsap.utils.shuffle(gsap.utils.toArray("#disku-grid > *"));
 
-  const distance = Math.hypot(window.innerWidth, window.innerHeight);
-  const angles = disks.map(() => gsap.utils.random(0, Math.PI * 2, 0.001));
+    const distance = Math.hypot(window.innerWidth, window.innerHeight);
+    const angles = disks.map(() => gsap.utils.random(0, Math.PI * 2, 0.001));
 
-  gsap.from(disks, {
-    x: (i) => Math.cos(angles[i]) * distance,
-    y: (i) => Math.sin(angles[i]) * distance,
-    opacity: 0,
-    ease: "power3.out",
-    stagger: 0.02,
-    duration: 1,
-  });
+    gsap.fromTo("#disku-grid", {opacity: 0}, {
+        opacity: 1,
+        duration: 1,
+    })
+
+
+    gsap.from(disks, {
+        x: (i) => Math.cos(angles[i]) * distance,
+        y: (i) => Math.sin(angles[i]) * distance,
+        ease: "power3.out",
+        stagger: 0.02,
+        duration: 1,
+    });
+
+    if (grid) {
+        window.addEventListener("loadstart", function () {
+            grid.classList.add("opacity-0");
+        })
+
+        window.addEventListener("load", function () {
+            grid.classList.remove("opacity-0");
+        })
+    }
+
+
 </script>
