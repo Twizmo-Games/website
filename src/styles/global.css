@@ -25,7 +25,7 @@
     }
 
     header {
-        @apply border-b-text border-b-2 bg-blue;
+        @apply border-b-2 border-text py-4;
     }
 
     nav {
@@ -37,10 +37,10 @@
     }
 
     footer {
-        @apply border-t-text border-t-2 bg-green;
+        @apply border-t-2 border-text;
     }
 
-    footer>* {
+    footer > * {
         @apply p-4 mx-auto container;
     }
 
@@ -70,6 +70,7 @@
         @apply my-8 md:my-12;
     }
 }
+
 /* Sometimes the drop down menu won't be hidden properly, and will blip on the screen until alpine.js initializes. This just stops the blipping. */
 [x-cloak] {
     display: none !important;
