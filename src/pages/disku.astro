@@ -1,0 +1,42 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import {Image} from "astro:assets";
+import taktak from "@/assets/images/tak-tak.jpg"
+import astro from "@/assets/astro.svg"
+---
+
+<Layout title="DISKU">
+
+    <div class="flex flex-col items-stretch gap-6 md:gap-12">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+            <div class="text-center md:text-left w-full md:w-1/2">
+                <h1 class="font-bold text-6xl">DISKU</h1>
+                <h1 class="font-bold">A Sudoku-Style Game of Logic and Deduction</h1>
+                <p>Use the information provided by the revealed discs to locate all the hidden shapes on the board.</p>
+                <p class="font-bold">Coming soon to the App Store and Google Play!</p>
+            </div>
+
+            <div class="w-full md:w-1/2">
+                <Image class="" src={taktak} alt="tak-tak"></Image>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <p class="flex-1 font-semibold">Get started with the beginner level 4x4 to learn the ropes.</p>
+            <span>
+                <Image src={astro} alt="astro"></Image>
+                </span>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <Image src={astro} alt="astro"></Image>
+            <p class="flex-1 text-right font-semibold">Learn new techniques with the mid-level 5x5 version.</p>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <p class="flex-1 font-semibold">Perfect your skills at the expert level with the 6x6 puzzle!</p>
+            <Image src={astro} alt="astro"></Image>
+        </div>
+
+    </div>
+</Layout>
