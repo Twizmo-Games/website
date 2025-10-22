@@ -3,40 +3,83 @@ import Layout from "@/layouts/Layout.astro";
 import {Image} from "astro:assets";
 import taktak from "@/assets/images/tak-tak.jpg"
 import astro from "@/assets/astro.svg"
+
+import fourXfour from "@/assets/images/disku/4x4.jpg";
+import fiveXfive from "@/assets/images/disku/5x5.jpg";
+import sixXsix from "@/assets/images/disku/6x6.jpg";
 ---
 
 <Layout title="DISKU">
 
-    <div class="flex flex-col items-stretch gap-6 md:gap-12">
+    <div class="flex flex-col items-center gap-6 md:gap-12">
         <div class="flex flex-col md:flex-row items-center gap-6">
             <div class="text-center md:text-left w-full md:w-1/2">
-                <h1 class="font-bold text-6xl">DISKU</h1>
+                <h1 class="font-bold text-6xl md:text-8xl">DISKU</h1>
                 <h1 class="font-bold">A Sudoku-Style Game of Logic and Deduction</h1>
                 <p>Use the information provided by the revealed discs to locate all the hidden shapes on the board.</p>
                 <p class="font-bold">Coming soon to the App Store and Google Play!</p>
             </div>
 
-            <div class="w-full md:w-1/2">
-                <Image class="" src={taktak} alt="tak-tak"></Image>
+            <video controls class="w-full h-full" src="https://www.youtube.com/watch?v=8zRXDsGydeQ"></video>
+
+            <!--<div class="w-full md:w-1/2">-->
+            <!--    <Image class="" src={taktak} alt="tak-tak"></Image>-->
+            <!--</div>-->
+        </div>
+
+        <div class="px-4 flex flex-col gap-4 md:gap-16">
+
+
+            <div class="flex items-center flex-reverse flex-wrap gap-4 md:gap-12">
+                <h1 id="4x4-text" class="text-center font-semibold flex-2 text-xl md:text-4xl">
+                    Get started with the beginner level 4x4 to learn the ropes.
+                </h1>
+                <Image id="4x4-image" class="max-w-1/4 rounded-xl flex-1 rotate-6" src={fourXfour} alt="4x4"></Image>
             </div>
-        </div>
 
-        <div class="flex items-center gap-4">
-            <p class="flex-1 font-semibold">Get started with the beginner level 4x4 to learn the ropes.</p>
-            <span>
-                <Image src={astro} alt="astro"></Image>
-                </span>
-        </div>
+            <div class="flex items-center gap-4 md:gap-12">
+                <Image id="5x5-image" class="rounded-xl max-w-1/4 flex-2 -rotate-6" src={fiveXfive} alt="5x5"></Image>
+                <h1 id="5x5-text" class="text-center font-semibold flex-1 text-xl md:text-4xl">Learn new techniques with
+                    the
+                    mid-level 5x5
+                    version.</h1>
+            </div>
 
-        <div class="flex items-center gap-4">
-            <Image src={astro} alt="astro"></Image>
-            <p class="flex-1 text-right font-semibold">Learn new techniques with the mid-level 5x5 version.</p>
-        </div>
-
-        <div class="flex items-center gap-4">
-            <p class="flex-1 font-semibold">Perfect your skills at the expert level with the 6x6 puzzle!</p>
-            <Image src={astro} alt="astro"></Image>
+            <div class=" flex items-center gap-4 md:gap-12">
+                <h1 id="6x6-text" class="text-center flex-2 font-semibold text-xl md:text-4xl">Perfect your skills at
+                    the
+                    expert level with the
+                    6x6
+                    puzzle!</h1>
+                <Image id="6x6-image" class="rounded-xl shadow-xl flex-1 w-full h-full rotate-6" src={sixXsix}
+                       alt="6x6"></Image>
+            </div>
         </div>
 
     </div>
 </Layout>
+
+<script>
+    import gsap from "gsap";
+
+    const _4x4text = document.getElementById("4x4-text");
+    const _5x5text = document.getElementById("5x5-text");
+    const _6x6text = document.getElementById("6x6-text");
+
+    const _4x4image = document.getElementById("4x4-image");
+    const _5x5image = document.getElementById("5x5-image");
+    const _6x6image = document.getElementById("6x6-image");
+
+    const timeline = gsap.timeline();
+
+    const distance = Math.hypot(window.innerWidth, window.innerHeight);
+
+    timeline.from(_4x4text, {x: -distance, duration: 0.25})
+    timeline.from(_4x4image, {x: distance, duration: 0.25})
+    timeline.from(_5x5image, {x: -distance, duration: 0.25})
+    timeline.from(_5x5text, {x: distance, duration: 0.25})
+    timeline.from(_6x6text, {x: -distance, duration: 0.25})
+    timeline.from(_6x6image, {x: distance, duration: 0.25})
+
+
+</script>

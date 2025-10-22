@@ -58,15 +58,11 @@ import diskBlue from "@/assets/sprites/disk-blue.svg";
     const distance = Math.hypot(window.innerWidth, window.innerHeight);
     const angles = disks.map(() => gsap.utils.random(0, Math.PI * 2, 0.001));
 
-    gsap.fromTo("#disku-grid", {opacity: 0}, {
-        opacity: 1,
-        duration: 1,
-    })
-
 
     gsap.from(disks, {
         x: (i) => Math.cos(angles[i]) * distance,
         y: (i) => Math.sin(angles[i]) * distance,
+        opacity: 0,
         ease: "power3.out",
         stagger: 0.02,
         duration: 1,
