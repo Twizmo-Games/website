@@ -1,7 +1,8 @@
-import { relPath } from "./util";
+import {relPath} from "./util";
 
 export const SiteLinks = [
-    { url: relPath("our-games"), name: "Our Games" },
-    { url: relPath("blog"), name: "Our Twizted Blog" },
-    { url: relPath("contact"), name: "Contact Us" },
+    {url: relPath("disku"), name: "DISKU"},
+    {url: relPath("taktak"), name: "tak•tak"},
+    {url: relPath("about"), name: "About Twizmo!"},
+    {url: relPath("contact"), name: "Contact"},
 ];

@@ -1,6 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import DiskuGrid from "@/components/DiskuGrid.astro";
+
+import tak_tak from "@/assets/images/tak-tak-intro.png"
+import {Image} from "astro:assets";
 ---
 
 <Layout title="Twizmo! Games">
@@ -10,7 +13,7 @@ import DiskuGrid from "@/components/DiskuGrid.astro";
         <DiskuGrid/>
 
         <p class="text-3xl font-semibold my-8 md:text-5xl">
-            Coming soon to iOS and Android!
+            Coming soon to iOS and Android
         </p>
 
         <p class="text-xl font-semibold">
@@ -23,5 +26,10 @@ import DiskuGrid from "@/components/DiskuGrid.astro";
             of disks, where each disk has a color and a shape on top. Each row,
             column, and color contains one, and only one of each shape.
         </p>
+
+
+        <h1 class="mt-16 md:mt-32">Also coming in 2026!</h1>
+        <Image src={tak_tak} alt="tak&bullet;tak" width="1080"></Image>
+
     </div>
 </Layout>
