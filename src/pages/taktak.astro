@@ -1,6 +1,24 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import {Image} from "astro:assets"
+
+import tak_tak from "@/assets/images/tak-tak.png"
 ---
 
 
-<Layout title="tak-tak"></Layout>
+<Layout title="tak&bullet;tak">
+    <div class="flex flex-col items-center">
+        <Image id="image" src={tak_tak} alt="tak&middot;tak" width="1920"/>
+        <h1 class="text-center text-lg md:text-4xl">Coming soon in 2026!</h1>
+    </div>
+</Layout>
+
+<script>
+    import gsap from "gsap";
+
+    const image = document.getElementById("image");
+
+    image?.addEventListener("load", function () {
+        gsap.from(image, {opacity: 0.0, duration: 1})
+    })
+</script>
