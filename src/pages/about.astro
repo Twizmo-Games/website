@@ -1,9 +1,33 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import twizmo from "@/assets/images/logo.svg"
+import {Image} from "astro:assets";
 ---
 
 <Layout title="About Twizmo!">
-    <h1>About Us</h1>
+    <div class="flex gap-4">
+        <h1 class="text-5xl">About</h1>
+        <Image id="logo" src={twizmo} alt="logo"></Image>
+    </div>
 
-    <p class="font-semibold italic">Likewise, do you want this page?</p>
+    <p>
+        <i>Twizmo! Games</i> launched in 2010 with its hit <i>Twizmo! Words</i> and <i>Twizmo! Cards</i> cube games.
+        Follow up titles included <i>tak•tak</i> which garnered numerous industry awards and a Mensa Select designation,
+        <i>Emoji Wars</i> card game and the <i>DISKO</i> board game, now reintroduced as an app: <i>DISKU</i>. Watch
+        this space as future games are launched on the play store!
+    </p>
+
 </Layout>
+
+
+<script>
+    import gsap from "gsap";
+
+    const logo = document.getElementById("logo");
+
+    gsap.from(logo, {
+        duration: 1,
+        y: -100,
+        ease: "bounce",
+    })
+</script>
