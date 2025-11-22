@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-    --color-background: var(--color-stone-50);
-    --color-primary: var(--color-blue-400);
-    --color-secondary: var(--color-stone-400);
-    --color-text: var(--color-stone-800);
-
     --color-blue: #60bed4;
     --color-green: #6bae3c;
     --color-yellow: #f1ce15;
     --color-orange: #e77226;
     --color-purple: #6a4b9e;
     --color-red: #d3422f;
+
+    --color-background: var(--color-stone-50);
+    --color-primary: var(--color-green);
+    --color-secondary: var(--color-stone-400);
+    --color-text: var(--color-stone-800);
 }
 
 @layer base {
 
     html {
-        @apply w-full h-full;
+        @apply w-full h-full md:text-xl;
     }
 
     body {
@@ -29,11 +29,11 @@
     }
 
     nav {
-        @apply p-4 mx-auto container;
+        @apply p-4 mx-auto container max-w-2xl;
     }
 
     main {
-        @apply px-4 py-8 flex-1 md:py-16 mx-auto container overflow-hidden;
+        @apply px-4 py-8 flex-1 md:py-16 max-w-2xl mx-auto container overflow-hidden;
     }
 
     footer {
