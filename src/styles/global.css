@@ -49,9 +49,12 @@
     h3,
     h4,
     h5,
-    h6,
-    p {
+    h6 {
         @apply my-4 md:my-8;
+    }
+
+    p {
+        @apply my-2 md:my-4;
     }
 
     h1 {
