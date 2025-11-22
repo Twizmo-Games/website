@@ -9,7 +9,7 @@ import sixXsix from "@/assets/images/disku/6x6.jpg";
 
 <Layout title="DISKU">
 
-    <div class="flex flex-col items-center gap-6 md:gap-12">
+    <div class="flex flex-col items-center gap-12 md:gap-24">
         <div class="flex flex-col md:flex-row items-center justify-around gap-6">
             <div class="text-center md:text-left w-full md:w-1/2">
                 <h1 class="font-bold text-6xl md:text-8xl">DISKU</h1>
@@ -18,8 +18,8 @@ import sixXsix from "@/assets/images/disku/6x6.jpg";
                 <p class="font-bold">Coming soon to the App Store and Google Play!</p>
             </div>
 
-            <video class="rounded-lg shadow" autoplay muted loop>
-                <source src="/website/disku.webm" type="video/webm" />
+            <video class="rounded-lg shadow" autoplay muted loop playsinline preload="auto">
+                <source src="/website/disku.webm" type="video/webm"/>
             </video>
 
         </div>
@@ -48,7 +48,7 @@ import sixXsix from "@/assets/images/disku/6x6.jpg";
                     expert level with the
                     6x6
                     puzzle!</h1>
-                <Image id="6x6-image" class="rounded-xl shadow-xl flex-1 w-full h-full rotate-6" src={sixXsix}
+                <Image id="6x6-image" class="rounded-xl max-w-1/4 flex-2 rotate-6" src={sixXsix}
                        alt="6x6"></Image>
             </div>
         </div>

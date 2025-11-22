@@ -1,17 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-
-import {Image} from "astro:assets";
-
-import circle from "@/assets/sprites/circle.svg";
 ---
 
 <Layout title="Contact Us">
     <h1>Contact Us!</h1>
     <p>Questions? Please don't hesitate to send us an email!</p>
-    <p>info@twizmogames.com</p>
-
-    <p class="italic font-semibold">
-        Rich: What else would you like to put in here? It's pretty bland.
-    </p>
+    <a class="text-primary hover:underline font-semibold" href="mailto:info@twizmo-games.com">info@twizmo-games.com</a>
 </Layout>
