@@ -7,13 +7,17 @@ import alpinejs from '@astrojs/alpinejs';
 
 import icon from 'astro-icon';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://twizmo-games.github.io/',
-    base: 'website',
-    vite: {
-        plugins: [tailwindcss()]
-    },
+  site: 'https://twizmo-games.github.io/',
+  base: 'website',
 
-    integrations: [alpinejs(), icon()]
+  vite: {
+      plugins: [tailwindcss()]
+  },
+
+  integrations: [alpinejs(), icon()],
+  adapter: cloudflare()
 });
