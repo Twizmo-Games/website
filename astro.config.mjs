@@ -11,7 +11,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://twizmo-games.github.io/',
+  site: 'https://twizmo-games.com/',
   base: 'website',
 
   vite: {
