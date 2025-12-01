@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import { currentYear } from "@/util";
 
 const socialMediaLinks = [
     { url: "https://facebook.com/TwizmoGames", icon: "fa7-brands:facebook" },
@@ -7,7 +8,6 @@ const socialMediaLinks = [
     { url: "https://x.com/TwizmoGames", icon: "fa7-brands:x-twitter" },
 ];
 
-const currentYear = new Date().getFullYear();
 ---
 
 <div class="mx-auto md:container">
@@ -25,7 +25,9 @@ const currentYear = new Date().getFullYear();
                     </a>
                 ))
             }
+
+            <a href="/privacy" class="underline">Privacy Policy</a>
         </div>
-        <span>&copy; {currentYear} Twizmo! Games. All rights reserved.</span>
+        <span>&copy; {currentYear()} Twizmo! Games. All rights reserved.</span>
     </div>
 </div>
