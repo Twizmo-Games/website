@@ -4,4 +4,12 @@
   "assets": {
     "directory": "./dist",
   },
+
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "routes": [
+    {
+      "pattern": "twizmo-games.com",
+      "custom_domain": true,
+    },
+  ],
 }
