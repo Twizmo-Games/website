@@ -3,18 +3,26 @@ import Layout from "@/layouts/Layout.astro";
 import DiskuGrid from "@/components/DiskuGrid.astro";
 
 import tak_tak from "@/assets/images/tak-tak-intro.png"
+import app_store from "@/assets/badges/app-store.svg"
 import {Image} from "astro:assets";
 ---
 
 <Layout title="Twizmo! Games">
-    <div class="text-center max-w-2xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto flex flex-col">
 
         <h1 class="text-6xl md:text-9xl">DISKU!</h1>
         <DiskuGrid/>
 
-        <p class="text-3xl font-semibold my-8 md:text-5xl">
-            Coming soon to iOS and Android
-        </p>
+
+        <div class="flex flex-col justify-center items-center ">
+            <a class="w-1/2" href="https://apps.apple.com/us/app/disku/id6755980233">
+                <Image class="w-full" src={app_store} alt="App Store"/>
+            </a>
+            <p class="text-xl font-semibold italic my-8 md:text-2xl">
+                Coming soon to Google Play!
+            </p>
+        </div>
+
 
         <p class="text-xl font-semibold">
             A minimalist brain teaser to scratch your puzzle itch!
@@ -28,7 +36,7 @@ import {Image} from "astro:assets";
         </p>
 
 
-        <h1 class="mt-16 md:mt-32">Also coming in 2026!</h1>
+        <h1 class="mt-16 md:mt-32">Coming in 2026!</h1>
         <Image src={tak_tak} alt="tak&bullet;tak" width="1080"></Image>
 
     </div>
