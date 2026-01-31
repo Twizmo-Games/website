@@ -1,0 +1,16 @@
+---
+import app_store from "@/assets/badges/app-store.svg";
+import {Image} from "astro:assets";
+interface Props {
+    src: ImageMetadata,
+    alt: string,
+    link: string,
+    class?: string,
+}
+
+const {src, alt, link, class: className} = Astro.props;
+---
+
+<a class={className} href={link}>
+    <Image alt={alt} class="w-full" src={src}/>
+</a>

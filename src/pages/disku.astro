@@ -5,17 +5,26 @@ import {Image} from "astro:assets";
 import fourXfour from "@/assets/images/disku/4x4.jpg";
 import fiveXfive from "@/assets/images/disku/5x5.jpg";
 import sixXsix from "@/assets/images/disku/6x6.jpg";
+import app_store from "@/assets/badges/app-store.svg"
+import Badge from "@/components/Badge.astro";
 ---
 
 <Layout title="DISKU">
 
-    <div class="flex flex-col items-center gap-12 md:gap-24">
+    <div class="flex flex-col items-center gap-12 md:gap-24 text-center">
         <div class="flex flex-col md:flex-row items-center justify-around gap-6">
-            <div class="text-center md:text-left w-full md:w-1/2">
-                <h1 class="font-bold text-6xl md:text-8xl">DISKU</h1>
-                <h1 class="font-bold">A Sudoku-Style Game of Logic and Deduction</h1>
+            <div class="flex flex-col md:text-left w-full md:w-1/2 gap-4 justify-start">
+                <h1 class="mt-0 mb-4 font-bold text-6xl md:text-8xl">DISKU</h1>
+                <h1 class="my-0 font-bold">A Sudoku-Style Game of Logic and Deduction</h1>
                 <p>Use the information provided by the revealed discs to locate all the hidden shapes on the board.</p>
-                <p class="font-bold">Coming soon to the App Store and Google Play!</p>
+
+                <div class="flex flex-wrap items-center justify-center">
+                    <p class="flex-1 font-bold">Coming soon to Google Play!</p>
+                    <Badge class="flex-1 mx-8"
+                           link="https://apps.apple.com/us/app/disku/id6755980233"
+                           src={app_store}
+                           alt="App Store"/>
+                </div>
             </div>
 
             <video class="rounded-lg shadow" autoplay muted loop playsinline preload="auto">
